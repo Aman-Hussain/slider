@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title></title>
+</head>
+<body>
+<h1>slider</h1>
+<SCRIPT>
+    var myPix = new Array("images/im.gif", "images/im1.gif", "images/im2.gif");
+    var thisPic = 0;
+
+    function processPrevious()
+    {
+        if (document.images && thisPic > 0) {
+            thisPic--;
+            document.myPicture.src = myPix[thisPic];
+        }
+    }
+
+    function processNext() {
+        if (document.images && thisPic < 2) {
+            thisPic++;
+            document.myPicture.src = myPix[thisPic];
+        }
+    }
+
+
+</SCRIPT>
+<IMG SRC="images/im.gif" NAME="myPicture">
+<A HREF="javascript:processPrevious()">Previous</A>
+<A HREF="javascript:processNext()">Next</A>
+
+
+</body>
+<
+</html>
